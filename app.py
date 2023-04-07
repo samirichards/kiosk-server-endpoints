@@ -12,6 +12,13 @@ def handle_feedback():
 
     return 'Success'
 
+@app.route('/test')
+def handle_test():
+    f = open("test.txt", "a")
+    f.write("test endpoint reached")
+    f.close()
+    return 'Success'
+
 
 if __name__ == '__main__':
     app.run()
